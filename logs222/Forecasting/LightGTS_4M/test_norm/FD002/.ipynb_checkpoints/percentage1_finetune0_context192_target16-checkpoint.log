@@ -1,0 +1,22 @@
+args: Namespace(is_finetune=0, is_transfer=1, dset_finetune='test_norm', data_id='FD002', time_col_name='Cycle', unit_col_name='UnitNumber', context_points=192, target_points=16, batch_size=64, num_workers=0, scaler='standard', features='M', img=0, patch_len=48, stride=48, revin=1, e_layers=3, d_layers=3, n_heads=8, d_model=256, d_ff=512, dropout=0.2, attn_dropout=0.2, head_dropout=0.2, alpha=1, n_epochs_finetune=20, n_epochs_freeze=10, patience=50, lr=0.0001, pretrained_model='./checkpoints/LightGTS_4M.pth', finetuned_model_id=1, model_type='LightGTS_4M ', is_half=1.0, is_all=0, visual_stride=1, visual_save_path='/home/LightGTS/visualization/')
+1
+number of patches: 4
+number of model params 3978800
+weights from ./checkpoints/LightGTS_4M.pth successfully transferred!
+
+Timer unit: 1e-09 s
+
+Total time: 0.63211 s
+File: /root/autodl-tmp/LightGTS-main/src/learner.py
+Function: model_forward at line 208
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+   208                                               def model_forward(self):
+   209        18   94607223.0 5.26e+06     15.0          self('before_forward')
+   210        18  534924151.0 2.97e+07     84.6          self.pred = self.model(self.xb)
+   211        18    2566008.0 142556.0      0.4          self('after_forward')
+   212        18      12765.0    709.2      0.0          return self.pred
+
+score: [array(1.026602, dtype=float32), array(0.84055483, dtype=float32)]
+----------- Complete! -----------
